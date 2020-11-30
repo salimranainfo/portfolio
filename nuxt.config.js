@@ -35,10 +35,4 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
-
-  // env variables
-
-  env: {
-    PORT: 3002,
-  },
 }

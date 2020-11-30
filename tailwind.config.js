@@ -16,6 +16,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      width: {
+        40: '9rem',
+        70: '19rem',
+      },
+      height: {
+        40: '9rem',
+        70: '19rem',
+      },
       animation: {
         'bounce-custom': 'bounce-tailwind 0.8s ease-in-out infinite',
       },

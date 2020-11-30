@@ -9,13 +9,16 @@
 
 <script>
 import Introduction from '@/components/Introduction.vue'
+import About from '@/components/About.vue'
+import Projects from '@/components/Projects.vue'
+import Contact from '@/components/Contact.vue'
 
 export default {
   components: {
     Introduction,
-    About: () => import('@/components/About.vue'),
-    Projects: () => import('@/components/Projects.vue'),
-    Contact: () => import('@/components/Contact.vue'),
+    About,
+    Projects,
+    Contact,
   },
   data() {
     return {}

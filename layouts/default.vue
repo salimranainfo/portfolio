@@ -1,12 +1,15 @@
 <template>
-  <div>
+  <div class="relative">
     <!-- Navigation Menu -->
-    <div class="fixed top-0 right-0 p-4">
+    <div class="fixed top-0 right-0 p-4" style="z-index: 999">
+      <!-- Burger Menu Icon -->
+
       <button
-        class="block h-10 w-10 focus:outline-none"
+        class="block h-10 w-10 md:h-12 md:w-12 focus:outline-none"
         @click="showMenuMethod"
       >
         <svg
+          class="text-gray-600"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -27,7 +30,8 @@
       >
         <div
           v-if="showMenu"
-          class="fixed rounded-lg top-0 right-0 bg-white w-screen h-screen"
+          class="fixed top-0 right-0 bg-white w-screen h-screen"
+          style="z-index: 1000"
         >
           <!-- Close Menu Icon/Button -->
           <button
@@ -35,7 +39,7 @@
             @click="hideMenuMethod"
           >
             <svg
-              class="w-6 h-6"
+              class="w-6 h-6 md:w-10 md:h-10"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -51,19 +55,39 @@
           </button>
           <!-- Menu Items -->
           <ul
-            class="text-center font-semibold flex flex-col justify-center items-center w-full h-full"
+            class="text-center flex flex-col justify-center items-center w-full h-full"
           >
             <li class="menu-item">
-              <a href="#" @click="hideMenuMethod">INTRODUCTION</a>
+              <a
+                href="#"
+                class="inline-block w-full px-16 py-4 text-lg font-semibold md:text-2xl"
+                @click="hideMenuMethod"
+                >INTRODUCTION</a
+              >
             </li>
             <li class="menu-item">
-              <a href="#about" @click="hideMenuMethod">ABOUT ME</a>
+              <a
+                href="#about"
+                class="inline-block w-full px-16 py-4 text-lg font-semibold md:text-2xl"
+                @click="hideMenuMethod"
+                >ABOUT ME</a
+              >
             </li>
             <li class="menu-item">
-              <a href="#" @click="hideMenuMethod">PROJECTS</a>
+              <a
+                href="#projects"
+                class="inline-block w-full px-16 py-4 text-lg font-semibold md:text-2xl"
+                @click="hideMenuMethod"
+                >PROJECTS</a
+              >
             </li>
             <li class="menu-item rounded-lg hover:rounded-lg">
-              <a href="#" @click="hideMenuMethod">CONTACT</a>
+              <a
+                href="#contact"
+                class="inline-block w-full px-16 py-4 text-lg font-semibold md:text-2xl"
+                @click="hideMenuMethod"
+                >CONTACT</a
+              >
             </li>
           </ul>
         </div>
@@ -117,9 +141,5 @@ body {
 
 .menu-item:hover {
   @apply bg-gray-200;
-}
-
-.menu-item a {
-  @apply inline-block w-full px-16 py-4 text-lg;
 }
 </style>
