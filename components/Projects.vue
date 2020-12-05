@@ -34,127 +34,90 @@
             class="bg-white shadow-md rounded-lg p-4 relative overflow-hidden"
             style="height: 70%"
           >
-            <!-- Previous Button -->
-
-            <button
-              class="ml-4 absolute left-0 font-mono font-bold border border-solid border-black rounded-full w-5 h-5 md:w-8 md:h-8 flex justify-center items-center p-1 focus:outline-none z-10"
-              style="top: 25%"
-              @click="goToPrevProject"
-            >
-              &lt;
-            </button>
-
             <!-- Loop through the projects -->
 
-            <div class="relative h-full w-full xl:flex xl:space-x-2">
-              <div
-                v-for="(project, index) in activeProjects"
-                :key="index"
-                class="h-full w-full"
-              >
-                <!-- Implement Animation for slider items -->
-
-                <transition
-                  name="fade"
-                  :enter-active-class="
-                    clickedSliderButton === 'right'
-                      ? 'animated slideInLeft slow'
-                      : 'animated slideInRight slow'
-                  "
-                  :leave-active-class="
-                    clickedSliderButton === 'left'
-                      ? 'animated slideOutLeft slow'
-                      : 'animated slideOutRight slow'
-                  "
+            <div v-swiper="swiperOptions" class="swiper">
+              <div class="swiper-wrapper">
+                <div
+                  v-for="(project, index) in projects"
+                  :key="index"
+                  class="swiper-slide"
                 >
-                  <div
-                    v-show="activeIndexes.includes(index)"
-                    class="absolute top-0 left-0 h-full w-full xl:static"
+                  <!-- Single Project Headline -->
+
+                  <h3
+                    class="text-center font-semibold text-xl md:text-3xl pt-2 md:mb-4"
+                    style="height: 3%"
                   >
-                    <!-- Single Project Headline -->
+                    {{ project.title }}
+                  </h3>
 
-                    <h3
-                      class="text-center font-semibold text-xl md:text-3xl pt-2 md:mb-4"
-                      style="height: 3%"
-                    >
-                      {{ project.title }}
-                    </h3>
+                  <!-- Single Project Images and Next/Prev Buttons -->
 
-                    <!-- Single Project Images and Next/Prev Buttons -->
-
-                    <div
-                      class="relative flex justify-center items-center"
-                      style="height: 47%"
-                    >
-                      <!-- Images in below Div -->
-
-                      <div
-                        class="relative flex justify-center items-center w-3/4 overflow-hidden"
-                      >
-                        <img
-                          :src="project.image[0]"
-                          alt="Alt Description"
-                          class="absolute left-0 top-0 block border-2 border-solid border-gray-600 rounded-lg w-9/12 z-10 shadow-lg mt-2"
-                        />
-
-                        <img
-                          :src="project.image[1]"
-                          alt="Alt Description"
-                          class="block border-2 border-solid border-gray-600 rounded-lg w-10/12 z-30 shadow-lg"
-                        />
-                        <img
-                          :src="project.image[2]"
-                          alt="Alt Description"
-                          class="absolute top-0 right-0 block border-2 border-solid border-gray-600 rounded-lg w-9/12 z-20 shadow-lg mt-2"
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Single Project Headline and Details -->
+                  <div
+                    class="flex justify-center items-center"
+                    style="height: 47%"
+                  >
+                    <!-- Images in below Div -->
 
                     <div
-                      class="flex flex-col justify-start items-start xl:pl-10"
-                      style="height: 40%"
+                      class="relative flex justify-center items-center w-3/4 h-full overflow-hidden"
                     >
-                      <h4 class="text-lg md:text-2xl font-semibold">
-                        {{ project.subTitle }}
-                      </h4>
-                      <p class="text-md md:text-xl mt-1">
-                        {{ project.details }}
-                      </p>
-                    </div>
+                      <img
+                        :src="project.image[0]"
+                        alt="Alt Description"
+                        class="absolute left-0 top-0 block border-2 border-solid border-gray-600 rounded-lg h-full z-10 shadow-lg mt-2"
+                      />
 
-                    <!-- Single Project Demo and Code Buttons -->
-
-                    <div
-                      class="flex justify-start items-center md:items-start space-x-2 xl:pl-10"
-                      style="height: 10%"
-                    >
-                      <button
-                        class="inline-block bg-indigo-800 text-white px-4 py-1 rounded-md shadow-lg font-semibold focus:outline-none transition duration-150 ease-in hover:bg-indigo-700 text-sm md:text-xl text-center"
-                      >
-                        DEMO
-                      </button>
-                      <button
-                        class="inline-block bg-indigo-600 text-white px-4 py-1 rounded-md shadow-lg font-semibold focus:outline-none transition duration-150 ease-in hover:bg-indigo-500 text-sm md:text-xl text-center"
-                      >
-                        CODE
-                      </button>
+                      <img
+                        :src="project.image[1]"
+                        alt="Alt Description"
+                        class="block border-2 border-solid border-gray-600 rounded-lg h-full z-30 shadow-lg"
+                      />
+                      <img
+                        :src="project.image[2]"
+                        alt="Alt Description"
+                        class="absolute top-0 right-0 block border-2 border-solid border-gray-600 rounded-lg h-full z-20 shadow-lg mt-2"
+                      />
                     </div>
                   </div>
-                </transition>
+
+                  <!-- Single Project Headline and Details -->
+
+                  <div
+                    class="flex flex-col justify-start items-start xl:pl-10"
+                    style="height: 40%"
+                  >
+                    <h4 class="text-lg md:text-2xl font-semibold">
+                      {{ project.subTitle }}
+                    </h4>
+                    <p class="text-md md:text-xl mt-1">
+                      {{ project.details }}
+                    </p>
+                  </div>
+
+                  <!-- Single Project Demo and Code Buttons -->
+
+                  <div
+                    class="flex justify-start items-center md:items-start space-x-2 xl:pl-10"
+                    style="height: 10%"
+                  >
+                    <button
+                      class="inline-block bg-indigo-800 text-white px-4 py-1 rounded-md shadow-lg font-semibold focus:outline-none transition duration-150 ease-in hover:bg-indigo-700 text-sm md:text-xl text-center"
+                    >
+                      DEMO
+                    </button>
+                    <button
+                      class="inline-block bg-indigo-600 text-white px-4 py-1 rounded-md shadow-lg font-semibold focus:outline-none transition duration-150 ease-in hover:bg-indigo-500 text-sm md:text-xl text-center"
+                    >
+                      CODE
+                    </button>
+                  </div>
+                </div>
               </div>
+              <div class="swiper-button-next">&gt;</div>
+              <div class="swiper-button-prev">&lt;</div>
             </div>
-
-            <!-- Next Button -->
-
-            <button
-              class="mr-4 absolute right-0 font-mono font-bold border border-solid border-black rounded-full w-5 h-5 md:w-8 md:h-8 flex justify-center items-center p-1 focus:outline-none"
-              style="top: 25%"
-              @click="goToNextProject"
-            >
-              &gt;
-            </button>
           </div>
         </transition>
         <!-- Go Down Arrow Sign -->
@@ -193,15 +156,29 @@
 </template>
 
 <script>
-// import img from '../assets/jrm.jpg'
+import { directive } from 'vue-awesome-swiper'
+import Swiper, { Navigation } from 'swiper'
+
+import 'swiper/swiper-bundle.css'
+
+Swiper.use([Navigation])
+
 export default {
   name: 'Projects',
+  directives: {
+    swiper: directive,
+  },
   data() {
     return {
       slideIn: false,
-      activeIndexes: [],
-      activeProjects: [],
       clickedSliderButton: 'right',
+      swiperOptions: {
+        loop: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      },
       projects: [
         {
           id: 1,
@@ -244,29 +221,13 @@ export default {
       return !this.$store.state.isMenuActive
     },
   },
-  watch: {
-    activeIndexes: {
-      deep: true,
-      handler(val) {
-        const projectsArray = []
-        val.forEach((el) => {
-          this.projects.forEach((project) => {
-            if (el === this.projects.indexOf(project)) {
-              projectsArray.push(project)
-            }
-          })
-        })
-        this.activeProjects = projectsArray
-      },
-    },
-  },
   mounted() {
     // Handle scroll event to perform animation on scroll only
 
     window.addEventListener('scroll', () => {
-      const aboutHeading = this.$refs.projects
-      if (aboutHeading) {
-        const marginTopHeading = aboutHeading.getBoundingClientRect().top
+      const projectsHeadingTop = this.$refs.projects
+      if (projectsHeadingTop) {
+        const marginTopHeading = projectsHeadingTop.getBoundingClientRect().top
         const innerHeight = window.innerHeight
 
         if (marginTopHeading < innerHeight / 2) {
@@ -274,35 +235,6 @@ export default {
         }
       }
     })
-
-    // Populate slider project array
-
-    const width = window.innerWidth
-    if (width < 1025) {
-      this.activeIndexes.push(0)
-    } else {
-      this.activeIndexes.push(0, 1)
-    }
-  },
-  methods: {
-    goToNextProject() {
-      const firstIndex = Math.min(...this.activeIndexes)
-      if (firstIndex !== 0) {
-        this.activeIndexes = []
-        this.activeIndexes.push(firstIndex - 1, firstIndex)
-        this.clickedSliderButton = 'right'
-        console.log(this.activeProjects)
-      }
-    },
-    goToPrevProject() {
-      const lastIndex = Math.max(...this.activeIndexes)
-      if (lastIndex !== this.projects.length - 1) {
-        this.activeIndexes = []
-        this.activeIndexes.push(lastIndex, lastIndex + 1)
-        this.clickedSliderButton = 'left'
-        console.log(this.activeIndexes)
-      }
-    },
   },
 }
 </script>
@@ -316,5 +248,39 @@ export default {
 .bounce-Out-arrow {
   animation: bounceOutDown; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1.1s; /* don't forget to set a duration! */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply border-2 border-solid border-gray-600 rounded-full h-6 w-6 font-mono flex justify-center items-center text-gray-600;
+}
+
+.swiper {
+  @apply h-full w-full;
+}
+
+.swiper::after {
+  @apply hidden;
+}
+
+.swiper-wrapper {
+  @apply h-full w-full p-4;
+}
+
+.swiper-wrapper::after {
+  @apply hidden;
+}
+
+.swiper-slide {
+  @apply h-full w-full bg-gray-200;
+}
+
+.swiper-slide::after {
+  @apply hidden;
 }
 </style>
