@@ -104,7 +104,7 @@
                   <!-- Single Project Headline and Details -->
 
                   <div
-                    class="flex flex-col justify-start items-start w-full pt-4"
+                    class="flex flex-col justify-start items-start w-full pt-4 overflow-hidden"
                     style="height: 40%"
                   >
                     <h4 class="text-md md:text-xl font-semibold">
@@ -235,25 +235,74 @@ export default {
         },
         {
           id: 2,
-          title: 'Project 2',
+          title: 'Portfolio Website',
           image: [
             require('../assets/jrm.jpg'),
             require('../assets/jrm.jpg'),
             require('../assets/jrm.jpg'),
           ],
-          subTitle: 'Project two sub heading',
-          details: 'Project details',
+          subTitle: 'Made with Nuxt and TailwindCSS',
+          details:
+            'This project is made with Nuxt and TailwindCSS to introduce myself and showcase my skills and expertise. I will add an admin page to this website to be able to update data easily.',
+          demo: 'https://srwebstudio.com',
+          code: 'https://github.com/salimranainfo/portfolio',
         },
         {
           id: 3,
-          title: 'Project 3',
+          title: 'Marketing Web App for SRC',
           image: [
             require('../assets/jrm.jpg'),
             require('../assets/jrm.jpg'),
             require('../assets/jrm.jpg'),
           ],
-          subTitle: 'Project three sub heading',
-          details: 'Project details',
+          subTitle:
+            'Made with Nuxt, Node, Express, MongoDB, Mongoose and TailwindCSS',
+          details:
+            'I can manage list of companies and their prospects in this app. I can track status of the prospects, add new, remove, update prospects. I use this app to run our email marketing.',
+          demo: 'https://marketing-demo.srwebstudio.com',
+          code: 'private',
+        },
+        {
+          id: 4,
+          title: 'Email Search and Verify App',
+          image: [
+            require('../assets/jrm.jpg'),
+            require('../assets/jrm.jpg'),
+            require('../assets/jrm.jpg'),
+          ],
+          subTitle: 'Made with Vue, Node, Express and Vuetify',
+          details:
+            'I can search emails from name and domain of someone. I use this app to search prospects email for my business. It uses a third party paid API as well as a builtin app made with Node.',
+          demo: 'https://email-demo.srwebstudio.com',
+          code: 'private',
+        },
+        {
+          id: 5,
+          title: 'Todo App - Fun Project',
+          image: [
+            require('../assets/jrm.jpg'),
+            require('../assets/jrm.jpg'),
+            require('../assets/jrm.jpg'),
+          ],
+          subTitle: 'Made with Vue and TailwindCSS',
+          details:
+            'I made this project while learning Vue. I am going to refactor this project code as my code has matured a lot since the beginning.',
+          demo: 'https://todo-app.srwebstudio.com',
+          code: 'https://github.com/salimranainfo/vue-todo-app',
+        },
+        {
+          id: 6,
+          title: 'Weather App - Fun Project',
+          image: [
+            require('../assets/jrm.jpg'),
+            require('../assets/jrm.jpg'),
+            require('../assets/jrm.jpg'),
+          ],
+          subTitle: 'Made with Vue, Thirdparty API and TailwindCSS',
+          details:
+            'I made this project while learning Vue. I am going to refactor this project code as my code has matured a lot since the beginning.',
+          demo: 'https://weather-app.srwebstudio.com',
+          code: 'https://github.com/salimranainfo/weather-app',
         },
       ],
     }
