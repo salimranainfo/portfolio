@@ -13,7 +13,7 @@
           >
             <h1
               v-show="slideIn"
-              class="text-3xl md:text-5xl font-bold text-gray-100 text-shadow text-center"
+              class="font-roboto-slab text-3xl md:text-5xl font-bold text-gray-100 text-shadow text-center"
             >
               Md Salim Rana
             </h1>
@@ -24,15 +24,18 @@
 
         <div
           style="height: 40%"
-          class="flex flex-col justify-center items-center md:mt-4 lg:mt-10 relative"
+          class="flex flex-col justify-center items-center"
         >
           <transition
             name="image"
             enter-active-class="animated bounceInLeft slow"
           >
-            <div v-show="slideIn" class="w-full h-full">
+            <div
+              v-show="slideIn"
+              class="w-full h-full flex flex-col justify-center items-center"
+            >
               <div
-                class="border border-solid border-gray-700 rounded-full p-1 bg-gradient-to-tr from-blue-700 to-red-600"
+                class="border border-solid border-gray-700 rounded-full p-1 bg-gradient-to-tr from-blue-700 to-red-600 mb-0"
               >
                 <img
                   :src="require('../assets/picture.jpg')"
@@ -40,17 +43,22 @@
                   class="block rounded-full border border-solid border-gray-700 h-40 w-40 md:h-70 md:w-70"
                 />
               </div>
-              <div
-                class="bg-gradient-to-t to-transparent from-gray-900 rounded-full shadow-effect z-10"
-              >
-                <div class="w-70 h-70 rounded-full"></div>
-              </div>
-              <div class="opacity-50 rounded-full p-1 shadow-effect">
-                <img
-                  src="@/assets/picture.jpg"
-                  alt="Md Salim Rana's picture"
-                  class="block opacity-50 rounded-full h-40 w-40 md:h-70 md:w-70"
-                />
+
+              <!-- Shadow of the Image -->
+
+              <div class="relative -mt-5 w-full">
+                <div
+                  class="bg-gradient-to-t to-transparent from-gray-900 rounded-full shadow-effect z-10 top-0"
+                >
+                  <div class="h-40 w-40 md:h-70 md:w-70 rounded-full"></div>
+                </div>
+                <div class="opacity-50 rounded-full shadow-effect top-0">
+                  <img
+                    :src="require('../assets/picture.jpg')"
+                    alt="Md Salim Rana's picture"
+                    class="block opacity-50 rounded-full h-40 w-40 md:h-70 md:w-70"
+                  />
+                </div>
               </div>
             </div>
           </transition>
@@ -170,7 +178,6 @@ export default {
 .shadow-effect {
   position: absolute;
   width: fit-content;
-  top: 75%;
   left: 25%;
   transform: rotate(180deg) scale(1.25, 0.5) skewX(15deg);
 }

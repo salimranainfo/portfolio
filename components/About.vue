@@ -17,7 +17,7 @@
           >
             <h2
               ref="about-heading"
-              class="text-xl md:text-3xl font-semibold text-center border-b-2 border-dashed border-gray-700"
+              class="font-roboto-slab text-xl md:text-3xl font-semibold text-center border-b-2 border-dashed border-gray-700"
             >
               ABOUT ME AND MY SKILLS
             </h2>
@@ -32,13 +32,13 @@
         >
           <div
             v-show="slideIn"
-            class="text-center px-2 md:px-6 pt-4 lg:pt-10 w-full"
+            class="text-center px-2 md:px-6 pt-4 w-full"
             style="height: 20%"
           >
             <h3 class="text-lg md:text-3xl font-semibold">
               A little bit about me
             </h3>
-            <p class="pt-2 text-sm md:text-lg lg:text-xl lg:pt-6">
+            <p class="pt-2 text-sm md:text-lg lg:text-xl">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
               qui rerum est hic ad harum necessitatibus iste? Ipsam voluptatibus
               deleniti maxime et impedit veniam dolorem, ipsa eaque odit?
@@ -58,7 +58,10 @@
             class="px-2 md:px-6 lg:px-10 pt-2 overflow-hidden w-full"
             style="height: 55%"
           >
-            <h3 class="text-lg md:text-3xl font-semibold pb-4 text-center">
+            <h3
+              class="text-lg md:text-3xl font-semibold pb-4 text-center"
+              style="height: 15%"
+            >
               Skills and Expertise
             </h3>
 
@@ -66,7 +69,7 @@
 
             <div
               class="bg-gray-100 flex flex-wrap border border-solid border-gray-600 w-full"
-              style="height: 88%"
+              style="height: 85%"
             >
               <button
                 :class="
@@ -104,10 +107,7 @@
 
               <!-- First Set of Skills - Core Languages -->
 
-              <div
-                class="w-full p-2 overflow-hidden relative w-full"
-                style="height: 80%"
-              >
+              <div class="w-full overflow-hidden relative" style="height: 80%">
                 <transition
                   name="skills-showcase"
                   enter-active-class="animated fadeInLeft slow"
@@ -118,7 +118,7 @@
                     class="absolute h-full w-full overflow-auto lg:pl-10"
                   >
                     <ul
-                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1"
+                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
                     >
                       <li
                         v-for="(skill, index) in skills.coreLanguages.skills"
@@ -154,10 +154,10 @@
                 >
                   <div
                     v-if="skills.libraries.isActive"
-                    class="absolute h-full w-full overflow-auto lg:pl-10"
+                    class="absolute h-full w-full overflow-hidden lg:pl-10"
                   >
                     <ul
-                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1"
+                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
                     >
                       <li
                         v-for="(skill, index) in skills.libraries.skills"
@@ -193,10 +193,10 @@
                 >
                   <div
                     v-if="skills.otherSkills.isActive"
-                    class="absolute h-full overflow-auto w-full lg:pl-10"
+                    class="absolute h-full overflow-hidden w-full lg:pl-10"
                   >
                     <ul
-                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1"
+                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
                     >
                       <li
                         v-for="(skill, index) in skills.otherSkills.skills"

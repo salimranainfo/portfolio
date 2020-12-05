@@ -16,7 +16,7 @@
             style="height: 15%"
           >
             <h2
-              class="text-xl md:text-3xl font-semibold text-center border-b-2 border-dashed border-gray-700"
+              class="font-roboto-slab text-xl md:text-3xl font-semibold text-center border-b-2 border-dashed border-gray-700"
             >
               PROJECTS I HAVE MADE
             </h2>

@@ -26,4 +26,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-roboto-slab {
+  font-family: 'Roboto Slab', serif;
+}
+</style>
