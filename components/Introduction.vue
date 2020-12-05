@@ -24,31 +24,35 @@
 
         <div
           style="height: 40%"
-          class="flex flex-col justify-center items-center md:mt-4 lg:mt-10"
+          class="flex flex-col justify-center items-center md:mt-4 lg:mt-10 relative"
         >
           <transition
             name="image"
             enter-active-class="animated bounceInLeft slow"
           >
-            <div
-              v-show="slideIn"
-              class="border border-solid border-gray-700 rounded-full p-1 bg-gradient-to-tr from-blue-700 to-red-600"
-            >
-              <img
-                src="@/assets/picture.jpg"
-                alt="Md Salim Rana's picture"
-                class="block rounded-full border border-solid border-gray-700 h-40 w-40 md:h-70 md:w-70"
-              />
+            <div v-show="slideIn" class="w-full h-full">
+              <div
+                class="border border-solid border-gray-700 rounded-full p-1 bg-gradient-to-tr from-blue-700 to-red-600"
+              >
+                <img
+                  :src="require('../assets/picture.jpg')"
+                  alt="Md Salim Rana's picture"
+                  class="block rounded-full border border-solid border-gray-700 h-40 w-40 md:h-70 md:w-70"
+                />
+              </div>
+              <div
+                class="bg-gradient-to-t to-transparent from-gray-900 rounded-full shadow-effect z-10"
+              >
+                <div class="w-70 h-70 rounded-full"></div>
+              </div>
+              <div class="opacity-50 rounded-full p-1 shadow-effect">
+                <img
+                  src="@/assets/picture.jpg"
+                  alt="Md Salim Rana's picture"
+                  class="block opacity-50 rounded-full h-40 w-40 md:h-70 md:w-70"
+                />
+              </div>
             </div>
-          </transition>
-          <transition
-            name="shadow"
-            enter-active-class="animated bounceInLeft slow"
-          >
-            <div
-              v-if="slideIn"
-              class="w-32 h-2 img-shadow md:mt-10 lg:mt-20"
-            ></div>
           </transition>
         </div>
 
@@ -56,7 +60,7 @@
 
         <div
           style="height: 30%"
-          class="flex flex-col justify-center items-center"
+          class="relative flex flex-col justify-center items-center z-20"
         >
           <transition
             name="sub-heading"
@@ -161,5 +165,13 @@ export default {
 .bounce-Out-arrow {
   animation: bounceOutDown; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1.1s; /* don't forget to set a duration! */
+}
+
+.shadow-effect {
+  position: absolute;
+  width: fit-content;
+  top: 75%;
+  left: 25%;
+  transform: rotate(180deg) scale(1.25, 0.5) skewX(15deg);
 }
 </style>

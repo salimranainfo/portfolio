@@ -31,12 +31,12 @@
         >
           <div
             v-if="slideIn"
-            class="bg-white shadow-md rounded-lg p-4 relative overflow-hidden"
+            class="bg-white shadow-md rounded-lg overflow-hidden w-full flex justify-center items-center"
             style="height: 70%"
           >
             <!-- Loop through the projects -->
 
-            <div v-swiper="swiperOptions" class="swiper">
+            <div v-swiper="swiperOptions">
               <div class="swiper-wrapper">
                 <div
                   v-for="(project, index) in projects"
@@ -46,8 +46,8 @@
                   <!-- Single Project Headline -->
 
                   <h3
-                    class="text-center font-semibold text-xl md:text-3xl pt-2 md:mb-4"
-                    style="height: 3%"
+                    class="text-center font-semibold text-xl md:text-3xl w-full flex justify-center items-start"
+                    style="height: 10%"
                   >
                     {{ project.title }}
                   </h3>
@@ -55,43 +55,41 @@
                   <!-- Single Project Images and Next/Prev Buttons -->
 
                   <div
-                    class="flex justify-center items-center"
-                    style="height: 47%"
+                    class="flex justify-center items-center relative w-10/12 xl:w-8/12"
+                    style="height: 40%"
                   >
                     <!-- Images in below Div -->
 
-                    <div
-                      class="relative flex justify-center items-center w-3/4 h-full overflow-hidden"
-                    >
-                      <img
-                        :src="project.image[0]"
-                        alt="Alt Description"
-                        class="absolute left-0 top-0 block border-2 border-solid border-gray-600 rounded-lg h-full z-10 shadow-lg mt-2"
-                      />
+                    <img
+                      :src="project.image[0]"
+                      alt="Alt Description"
+                      class="absolute left-0 block border-2 border-solid border-gray-600 rounded-lg w-8/12 z-10 shadow-lg mt-2"
+                      style="height: 85%"
+                    />
 
-                      <img
-                        :src="project.image[1]"
-                        alt="Alt Description"
-                        class="block border-2 border-solid border-gray-600 rounded-lg h-full z-30 shadow-lg"
-                      />
-                      <img
-                        :src="project.image[2]"
-                        alt="Alt Description"
-                        class="absolute top-0 right-0 block border-2 border-solid border-gray-600 rounded-lg h-full z-20 shadow-lg mt-2"
-                      />
-                    </div>
+                    <img
+                      :src="project.image[1]"
+                      alt="Alt Description"
+                      class="block border-2 border-solid border-gray-600 rounded-lg h-full w-10/12 z-30 shadow-lg"
+                    />
+                    <img
+                      :src="project.image[2]"
+                      alt="Alt Description"
+                      class="absolute right-0 block border-2 border-solid border-gray-600 rounded-lg h-full w-8/12 z-20 shadow-lg mt-2"
+                      style="height: 85%"
+                    />
                   </div>
 
                   <!-- Single Project Headline and Details -->
 
                   <div
-                    class="flex flex-col justify-start items-start xl:pl-10"
+                    class="flex flex-col justify-start items-start w-full pt-4"
                     style="height: 40%"
                   >
-                    <h4 class="text-lg md:text-2xl font-semibold">
+                    <h4 class="text-md md:text-xl font-semibold">
                       {{ project.subTitle }}
                     </h4>
-                    <p class="text-md md:text-xl mt-1">
+                    <p class="text-sm md:text-lg mt-1">
                       {{ project.details }}
                     </p>
                   </div>
@@ -99,7 +97,7 @@
                   <!-- Single Project Demo and Code Buttons -->
 
                   <div
-                    class="flex justify-start items-center md:items-start space-x-2 xl:pl-10"
+                    class="flex justify-start items-center md:items-start space-x-2 xl:pl-10 w-full"
                     style="height: 10%"
                   >
                     <button
@@ -171,9 +169,9 @@ export default {
   data() {
     return {
       slideIn: false,
-      clickedSliderButton: 'right',
       swiperOptions: {
         loop: false,
+        spaceBetween: 20,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -258,29 +256,27 @@ export default {
 .swiper-button-next,
 .swiper-button-prev {
   @apply border-2 border-solid border-gray-600 rounded-full h-6 w-6 font-mono flex justify-center items-center text-gray-600;
+  top: 32%;
 }
 
-.swiper {
-  @apply h-full w-full;
-}
-
-.swiper::after {
-  @apply hidden;
+.swiper-container {
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
 }
 
 .swiper-wrapper {
-  @apply h-full w-full p-4;
-}
-
-.swiper-wrapper::after {
-  @apply hidden;
+  @apply h-full w-full;
 }
 
 .swiper-slide {
-  @apply h-full w-full bg-gray-200;
-}
-
-.swiper-slide::after {
-  @apply hidden;
+  padding: 0.5rem !important;
+  @apply bg-gray-200 p-4;
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 0.5rem;
+  @apply flex flex-col justify-center items-center;
 }
 </style>
