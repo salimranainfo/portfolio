@@ -177,7 +177,7 @@
             style="height: 20%"
             class="flex justify-center items-center space-x-2"
           >
-            <a href="#">
+            <a href="https://www.linkedin.com/in/salimranahere" target="_blank">
               <svg
                 class="h-8 w-8 shadow-md md:h-12 md:w-12"
                 style="enable-background: new 0 0 64 64"
@@ -270,7 +270,7 @@
                 <g id="Layer_17" />
               </svg>
             </a>
-            <a href="#">
+            <a href="https://github.com/salimranainfo" target="_blank">
               <svg
                 class="h-8 w-8 md:w-12 md:h-12"
                 style="enable-background: new 0 0 512 512"

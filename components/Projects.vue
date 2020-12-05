@@ -1,5 +1,26 @@
 <template>
-  <div id="projects" ref="projects" class="overflow-hidden">
+  <div id="projects" ref="projects" class="relative overflow-hidden">
+    <!-- Private Code Message Div -->
+
+    <div
+      v-if="privateMsg"
+      class="absolute w-screen h-screen flex flex-col justify-center items-center bg-gray-600 p-4 bg-opacity-75"
+      style="z-index: 1001"
+    >
+      <p
+        class="relative w-full h-64 text-center bg-white flex justify-center items-center text-md font-semibold p-6"
+      >
+        The code for this project is in a aprivate repo on Github. Kindly send
+        me a message or email me to get the code. Thank you.
+        <button
+          @click="privateMsg = false"
+          class="absolute top-0 right-0 m-2 font-mono font-semibold focus:outline-none"
+        >
+          X
+        </button>
+      </p>
+    </div>
+
     <!-- Container for large screens -->
 
     <div class="w-screen h-screen p-4 md:p-10">
@@ -103,12 +124,31 @@
                     <button
                       class="inline-block bg-indigo-800 text-white px-4 py-1 rounded-md shadow-lg font-semibold focus:outline-none transition duration-150 ease-in hover:bg-indigo-700 text-sm md:text-xl text-center"
                     >
-                      DEMO
+                      <a
+                        :href="project.demo"
+                        target="_blank"
+                        class="inline-block w-full h-full"
+                        >DEMO</a
+                      >
                     </button>
                     <button
                       class="inline-block bg-indigo-600 text-white px-4 py-1 rounded-md shadow-lg font-semibold focus:outline-none transition duration-150 ease-in hover:bg-indigo-500 text-sm md:text-xl text-center"
                     >
-                      CODE
+                      <a
+                        :href="
+                          project.code === 'private'
+                            ? '#projects'
+                            : project.code
+                        "
+                        :target="project.code === 'private' ? '' : '_blank'"
+                        class="inline-block w-full h-full"
+                        @click="
+                          project.code === 'private'
+                            ? (privateMsg = true)
+                            : (privateMsg = false)
+                        "
+                        >CODE</a
+                      >
                     </button>
                   </div>
                 </div>
@@ -168,6 +208,7 @@ export default {
   },
   data() {
     return {
+      privateMsg: false,
       slideIn: false,
       swiperOptions: {
         loop: false,
@@ -180,14 +221,17 @@ export default {
       projects: [
         {
           id: 1,
-          title: 'Project 1',
+          title: 'JRM Global Sourcing Website',
           image: [
             require('../assets/jrm.jpg'),
             require('../assets/jrm.jpg'),
             require('../assets/jrm.jpg'),
           ],
-          subTitle: 'Project sub heading',
-          details: 'Project details',
+          subTitle: 'Made with Vue & Vuetify',
+          details:
+            'This is my own company website. I made it with Vue and Vuetify only in the early days of my Vue learning. I will refactory the codes for this project soon and will break into smaller components.',
+          demo: 'https://jrmglobalsourcing.com',
+          code: 'private',
         },
         {
           id: 2,

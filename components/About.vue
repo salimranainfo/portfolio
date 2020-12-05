@@ -32,17 +32,19 @@
         >
           <div
             v-show="slideIn"
-            class="text-center px-2 md:px-6 pt-4 w-full"
+            class="text-center px-2 md:px-6 pt-4 w-full overflow-hidden"
             style="height: 20%"
           >
             <h3 class="text-lg md:text-3xl font-semibold">
               A little bit about me
             </h3>
             <p class="pt-2 text-sm md:text-lg lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
-              qui rerum est hic ad harum necessitatibus iste? Ipsam voluptatibus
-              deleniti maxime et impedit veniam dolorem, ipsa eaque odit?
-              Laudantium, sed!
+              I was a full time
+              <strong>Garments Merchandising Professional </strong>for more than
+              13 years. I have been preparing myself to
+              <strong>build a successfull career as a Web Developer</strong> in
+              the past few years. My expertise is
+              <strong>Vue, Nuxt &amp; Node</strong>.
             </p>
           </div>
         </transition>
@@ -275,15 +277,24 @@ export default {
           skills: [
             {
               skill: 'HTML 5',
-              details: ['Semantic HTML', 'Audio & Video', 'Geolocation API'],
+              details: [
+                'Semantic HTML, Audio & Video, Forms',
+                'Geolocation API',
+              ],
             },
             {
               skill: 'CSS 3',
-              details: ['Basic Usage', 'Flexbox Layout', 'Grid Layout'],
+              details: [
+                'Basic, Flexbox & Grid layouts',
+                'Animations & Transitions',
+              ],
             },
             {
               skill: 'JavaScript',
-              details: [],
+              details: [
+                'Vanilla JS (ES6), Class, DOM',
+                'Promise & Aync/Await, OOP',
+              ],
             },
           ],
         },
@@ -292,7 +303,18 @@ export default {
           skills: [
             {
               skill: 'Vue JS',
-              details: ['Semantic HTML', 'Audio & Video', 'Geolocation API'],
+              details: ['Basics, Router, Vuex', 'Scalable Component Design'],
+            },
+            {
+              skill: 'Nuxt JS',
+              details: [
+                'asyncData, fetch, nuxtServerInit',
+                'Server Middleware & Modules',
+              ],
+            },
+            {
+              skill: 'Node, Express, MongoDB & Mongoose',
+              details: ['RESTfull API Design', 'Automation using Node/Express'],
             },
           ],
         },
@@ -300,8 +322,18 @@ export default {
           isActive: false,
           skills: [
             {
-              skill: 'Vue JS',
-              details: ['Semantic HTML', 'Audio & Video', 'Geolocation API'],
+              skill: 'Notable Frameworks & Tools',
+              details: [
+                'TailwindCSS - I just love this',
+                'Vuetify, Bootstrap Vue, Animate.css, Swiper JS',
+              ],
+            },
+            {
+              skill: 'Others',
+              details: [
+                'Basic Photoshop Skills',
+                'Expert MS Office user - Excel VloopUp, Pivot Table',
+              ],
             },
           ],
         },

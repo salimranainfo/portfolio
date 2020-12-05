@@ -77,8 +77,8 @@
             <div v-if="slideIn" class="px-10">
               <h2 class="font-semibold text-center text-lg md:text-3xl">
                 Full Stack Web Developer - Vue JS | Nuxt JS | TailwindCSS |
-                Vuetify | Animate.css | Node JS | Express | RESTfull API |
-                MongoDB
+                Vuetify | Animate.css | Swiper JS | Node JS | Express | RESTfull
+                API | MongoDB | Monggose | JWT
               </h2>
 
               <div class="flex justify-center items-center mt-4">
