@@ -67,7 +67,7 @@
                   <!-- Single Project Headline -->
 
                   <h3
-                    class="text-center font-semibold text-xl md:text-3xl w-full flex justify-center items-start"
+                    class="text-center font-semibold text-xl md:text-2xl w-full flex justify-center items-start"
                     style="height: 10%"
                   >
                     {{ project.title }}
@@ -84,19 +84,19 @@
                     <img
                       :src="project.image[0]"
                       alt="Alt Description"
-                      class="absolute left-0 block border-2 border-solid border-gray-600 rounded-lg w-8/12 z-10 shadow-lg mt-2"
+                      class="absolute left-0 block border-2 border-solid border-gray-600 rounded-lg w-8/12 md:w-6/12 z-10 shadow-lg mt-2"
                       style="height: 85%"
                     />
 
                     <img
                       :src="project.image[1]"
                       alt="Alt Description"
-                      class="block border-2 border-solid border-gray-600 rounded-lg h-full w-10/12 z-30 shadow-lg"
+                      class="block border-2 border-solid border-gray-600 rounded-lg h-full w-10/12 md:w-6/12 z-30 shadow-lg"
                     />
                     <img
                       :src="project.image[2]"
                       alt="Alt Description"
-                      class="absolute right-0 block border-2 border-solid border-gray-600 rounded-lg h-full w-8/12 z-20 shadow-lg mt-2"
+                      class="absolute right-0 block border-2 border-solid border-gray-600 rounded-lg h-full w-8/12 md:w-6/12 z-20 shadow-lg mt-2"
                       style="height: 85%"
                     />
                   </div>
@@ -223,9 +223,9 @@ export default {
           id: 1,
           title: 'JRM Global Sourcing Website',
           image: [
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
+            require('../assets/jrm1.jpg'),
+            require('../assets/jrm2.jpg'),
+            require('../assets/jrm3.jpg'),
           ],
           subTitle: 'Made with Vue & Vuetify',
           details:
@@ -237,9 +237,9 @@ export default {
           id: 2,
           title: 'Portfolio Website',
           image: [
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
+            require('../assets/portfolio2.jpg'),
+            require('../assets/portfolio1.jpg'),
+            require('../assets/portfolio3.jpg'),
           ],
           subTitle: 'Made with Nuxt and TailwindCSS',
           details:
@@ -251,9 +251,9 @@ export default {
           id: 3,
           title: 'Marketing Web App for SRC',
           image: [
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
+            require('../assets/marketing1.jpg'),
+            require('../assets/marketing2.jpg'),
+            require('../assets/marketing1.jpg'),
           ],
           subTitle:
             'Made with Nuxt, Node, Express, MongoDB, Mongoose and TailwindCSS',
@@ -266,9 +266,9 @@ export default {
           id: 4,
           title: 'Email Search and Verify App',
           image: [
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
+            require('../assets/placeholder.jpg'),
+            require('../assets/placeholder.jpg'),
+            require('../assets/placeholder.jpg'),
           ],
           subTitle: 'Made with Vue, Node, Express and Vuetify',
           details:
@@ -280,9 +280,9 @@ export default {
           id: 5,
           title: 'Todo App - Fun Project',
           image: [
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
+            require('../assets/placeholder.jpg'),
+            require('../assets/placeholder.jpg'),
+            require('../assets/placeholder.jpg'),
           ],
           subTitle: 'Made with Vue and TailwindCSS',
           details:
@@ -294,9 +294,9 @@ export default {
           id: 6,
           title: 'Weather App - Fun Project',
           image: [
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
-            require('../assets/jrm.jpg'),
+            require('../assets/placeholder.jpg'),
+            require('../assets/placeholder.jpg'),
+            require('../assets/placeholder.jpg'),
           ],
           subTitle: 'Made with Vue, Thirdparty API and TailwindCSS',
           details:
@@ -365,7 +365,7 @@ export default {
 }
 
 .swiper-slide {
-  padding: 0.5rem !important;
+  padding: 1rem !important;
   @apply bg-gray-200 p-4;
   height: 100% !important;
   width: 100% !important;

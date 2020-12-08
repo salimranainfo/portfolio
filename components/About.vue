@@ -120,7 +120,7 @@
                     class="absolute h-full w-full overflow-auto lg:pl-10"
                   >
                     <ul
-                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
+                      class="py-1 text-sm md:text-md flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
                     >
                       <li
                         v-for="(skill, index) in skills.coreLanguages.skills"
@@ -159,7 +159,7 @@
                     class="absolute h-full w-full overflow-hidden lg:pl-10"
                   >
                     <ul
-                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
+                      class="py-1 text-sm md:text-md flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
                     >
                       <li
                         v-for="(skill, index) in skills.libraries.skills"
@@ -198,7 +198,7 @@
                     class="absolute h-full overflow-hidden w-full lg:pl-10"
                   >
                     <ul
-                      class="py-1 text-sm md:text-xl flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
+                      class="py-1 text-sm md:text-md flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
                     >
                       <li
                         v-for="(skill, index) in skills.otherSkills.skills"
@@ -333,6 +333,7 @@ export default {
               details: [
                 'Basic Photoshop Skills',
                 'Expert MS Office user - Excel VloopUp, Pivot Table',
+                'Setting up Linux Server & deploying Node apps with nginx',
               ],
             },
           ],

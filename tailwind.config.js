@@ -17,12 +17,12 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        40: '8.5rem',
-        70: '17rem',
+        40: '10rem',
+        70: '13rem',
       },
       height: {
-        40: '8.5rem',
-        70: '17rem',
+        40: '10rem',
+        70: '13rem',
       },
       animation: {
         'bounce-custom': 'bounce-tailwind 0.8s ease-in-out infinite',

@@ -46,7 +46,7 @@
 
               <!-- Shadow of the Image -->
 
-              <div class="relative -mt-5 w-full">
+              <div class="relative -mt-4 md:-mt-8 w-full">
                 <div
                   class="bg-gradient-to-t to-transparent from-gray-900 rounded-full shadow-effect z-10 top-0"
                 >
@@ -78,7 +78,7 @@
               <h2 class="font-semibold text-center text-lg md:text-3xl">
                 Full Stack Web Developer - Vue JS | Nuxt JS | TailwindCSS |
                 Vuetify | Animate.css | Swiper JS | Node JS | Express | RESTfull
-                API | MongoDB | Monggose | JWT
+                API | MongoDB | Mongoose | JWT
               </h2>
 
               <div class="flex justify-center items-center mt-4">
