@@ -1,7 +1,7 @@
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
-
+  target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Md Salim Rana - Portfolio',
@@ -20,6 +20,8 @@ export default {
       },
     ],
   },
+
+  // <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123727179-1"></script>
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],

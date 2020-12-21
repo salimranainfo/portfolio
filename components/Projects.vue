@@ -8,7 +8,7 @@
       style="z-index: 1001"
     >
       <p
-        class="relative w-full h-64 text-center bg-white flex justify-center items-center text-md font-semibold p-6"
+        class="relative w-full md:w-1/2 h-64 text-center bg-white flex justify-center items-center text-md font-semibold p-6"
       >
         The code for this project is in a aprivate repo on Github. Kindly send
         me a message or email me to get the code. Thank you.
@@ -266,9 +266,9 @@ export default {
           id: 4,
           title: 'Email Search and Verify App',
           image: [
-            require('../assets/placeholder.jpg'),
-            require('../assets/placeholder.jpg'),
-            require('../assets/placeholder.jpg'),
+            require('../assets/email2.jpg'),
+            require('../assets/email1.jpg'),
+            require('../assets/email3.jpg'),
           ],
           subTitle: 'Made with Vue, Node, Express and Vuetify',
           details:

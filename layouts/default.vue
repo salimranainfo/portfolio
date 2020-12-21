@@ -58,19 +58,19 @@
             class="text-center flex flex-col justify-center items-center w-full h-full"
           >
             <li class="menu-item">
-              <a
-                href="#"
+              <nuxt-link
+                to="/"
                 class="inline-block w-full px-16 py-4 text-lg font-semibold md:text-2xl"
                 @click="hideMenuMethod"
-                >INTRODUCTION</a
+                >INTRODUCTION</nuxt-link
               >
             </li>
             <li class="menu-item">
-              <a
-                href="#about"
+              <nuxt-link
+                to="#about"
                 class="inline-block w-full px-16 py-4 text-lg font-semibold md:text-2xl"
                 @click="hideMenuMethod"
-                >ABOUT ME</a
+                >ABOUT ME</nuxt-link
               >
             </li>
             <li class="menu-item">
