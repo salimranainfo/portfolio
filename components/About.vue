@@ -38,13 +38,21 @@
             <h3 class="text-lg md:text-3xl font-semibold">
               A little bit about me
             </h3>
-            <p class="pt-2 text-sm md:text-lg lg:text-xl">
+            <p class="pt-2 text-sm md:text-lg">
               I was a full time
               <strong>Garments Merchandising Professional </strong>for more than
               13 years. I have been preparing myself to
               <strong>build a successfull career as a Web Developer</strong> in
               the past few years. My expertise is
-              <strong>Vue, Nuxt &amp; Node</strong>.
+              <strong>JavaScript Ecosystem and CSS</strong>. I am a full time
+              <strong>freelance web developer</strong> now. You can see my
+              Fiverr profile
+              <a
+                href="https://fiverr.com/salim4369"
+                class="underline text-indigo-800"
+                target="_blank"
+                >here</a
+              >
             </p>
           </div>
         </transition>
@@ -120,7 +128,7 @@
                     class="absolute h-full w-full overflow-auto lg:pl-10"
                   >
                     <ul
-                      class="py-1 text-sm md:text-md flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
+                      class="py-1 text-sm md:text-base flex flex-col justify-center h-full w-full space-y-1 overflow-hidden"
                     >
                       <li
                         v-for="(skill, index) in skills.coreLanguages.skills"
@@ -136,7 +144,7 @@
                           <li
                             v-for="(detail, i) in skill.details"
                             :key="i"
-                            class="flex items-center"
+                            class="flex items-center text-xs md:text-sm"
                           >
                             <span class="arrow-icon-second">+</span
                             ><span>{{ detail }}</span>
@@ -302,18 +310,21 @@ export default {
           isActive: false,
           skills: [
             {
-              skill: 'Vue JS',
-              details: ['Basics, Router, Vuex', 'Scalable Component Design'],
-            },
-            {
-              skill: 'Nuxt JS',
+              skill: 'Vue JS & Nuxt JS',
               details: [
-                'asyncData, fetch, nuxtServerInit',
-                'Server Middleware & Modules',
+                'Basics, Router, Vuex, asyncData, fetch',
+                'Server Middleware & Modules, nuxtServerInit',
               ],
             },
             {
-              skill: 'Node, Express, MongoDB & Mongoose',
+              skill: 'React JS & Next JS',
+              details: [
+                'Basics, Router & State management',
+                'Functional Component',
+              ],
+            },
+            {
+              skill: 'Svelte, Sapper, Node, Express, MongoDB',
               details: ['RESTfull API Design', 'Automation using Node/Express'],
             },
           ],
@@ -324,13 +335,14 @@ export default {
             {
               skill: 'Notable Frameworks & Tools',
               details: [
-                'TailwindCSS - I just love this',
+                'TailwindCSS - I just love this, AWS Amplify',
                 'Vuetify, Bootstrap Vue, Animate.css, Swiper JS',
               ],
             },
             {
               skill: 'Others',
               details: [
+                'Starpi, Contentful etc',
                 'Basic Photoshop Skills',
                 'Expert MS Office user - Excel VloopUp, Pivot Table',
                 'Setting up Linux Server & deploying Node apps with nginx',

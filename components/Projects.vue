@@ -13,8 +13,8 @@
         The code for this project is in a aprivate repo on Github. Kindly send
         me a message or email me to get the code. Thank you.
         <button
-          @click="privateMsg = false"
           class="absolute top-0 right-0 m-2 font-mono font-semibold focus:outline-none"
+          @click="privateMsg = false"
         >
           X
         </button>
@@ -259,7 +259,7 @@ export default {
             'Made with Nuxt, Node, Express, MongoDB, Mongoose and TailwindCSS',
           details:
             'I can manage list of companies and their prospects in this app. I can track status of the prospects, add new, remove, update prospects. I use this app to run our email marketing.',
-          demo: 'https://marketing-demo.srwebstudio.com',
+          demo: '#!',
           code: 'private',
         },
         {
@@ -273,7 +273,7 @@ export default {
           subTitle: 'Made with Vue, Node, Express and Vuetify',
           details:
             'I can search emails from name and domain of someone. I use this app to search prospects email for my business. It uses a third party paid API as well as a builtin app made with Node.',
-          demo: 'https://email-demo.srwebstudio.com',
+          demo: '#!',
           code: 'private',
         },
         {
@@ -287,7 +287,7 @@ export default {
           subTitle: 'Made with Vue and TailwindCSS',
           details:
             'I made this project while learning Vue. I am going to refactor this project code as my code has matured a lot since the beginning.',
-          demo: 'https://todo-app.srwebstudio.com',
+          demo: '#!',
           code: 'https://github.com/salimranainfo/vue-todo-app',
         },
         {
@@ -301,7 +301,7 @@ export default {
           subTitle: 'Made with Vue, Thirdparty API and TailwindCSS',
           details:
             'I made this project while learning Vue. I am going to refactor this project code as my code has matured a lot since the beginning.',
-          demo: 'https://weather-app.srwebstudio.com',
+          demo: '#!',
           code: 'https://github.com/salimranainfo/weather-app',
         },
       ],

@@ -8,7 +8,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Md Salim Rana is a full stack web developer. Specialized in JavaScript related libraries and CSS frameworks like Vue, Nuxt, React, Next, Svelte, Tailwind etc. He is also well experienced in Node and MongoDB full stack development.',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
